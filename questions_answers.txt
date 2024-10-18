@@ -1,0 +1,24 @@
+POI Questions
+1. What is POI in Digital Marketing?
+POI in context of digital marketing is a location-based marketing strategy that targets consumers then they are near or within a physical location or POI.
+These points of interest can be places like retail stores, restaurants or any other physical location where customers might come and visit.
+The primary goal of POI marketing is to deliver highly targeted and relevant content or offers to potential customers based on location
+
+2. What is Address Sourcing for Targeting?
+Address sourcing is usually for targeting local ads. Show ads to customers based on their addresses, like nearby restaurants, etc.
+
+3. What is reverse geocoding?
+Reverse geocoding is converting the coordinates longitude and latitudes in human-readable addresses
+
+to run these first initialize virtual env and then
+`python -m venv .venv`
+`.venv\Scripts\activate.bat` or `source .venv\bin\activate`
+`pip install -r requirements.txt`
+
+goto POI_task_1.py for Task 1
+to run `python POI_task_1.py` or `python3 POI_task_1.py`
+
+goto POI_task_2.py for Task 2
+to run `python POI_task_2.py` or `python3 POI_task_2.py`
+
+goto sql_queries.sql for sql section
