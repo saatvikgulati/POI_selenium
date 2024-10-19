@@ -1,7 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
 
@@ -40,7 +38,6 @@ try:
                 element in property_types]
             all_property_types.extend(property_type)
             driver.back()
-            WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.pageComponent a')))
         print(all_property_names)
         print(all_property_types)
 finally:
