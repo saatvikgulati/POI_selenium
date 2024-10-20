@@ -36,7 +36,7 @@ try:
         all_dict={'Name':all_property_names,'Links':all_property_links,'Types':all_property_types}
         if not os.path.exists('data'):
             os.mkdir('data')
-        pd.DataFrame(dict([(i,pd.Series(j)) for i,j in all_dict.items()])).to_csv('data/property_list.csv',index=False)
+        pd.DataFrame(dict([(i,pd.Series(j)) for i,j in all_dict.items()])).to_excel('data/property_list.xlsx',index=False)
         print(all_property_types)
 finally:
     driver.quit()
