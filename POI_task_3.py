@@ -24,6 +24,7 @@ try:
             property_names = driver.find_elements(By.CSS_SELECTOR, 'div.tupleNew__locationName, .ellipsis')
             properties_name = [element.get_attribute('innerText').strip().replace('\r\n','').replace('\n','').lower() for element in property_names if element.get_attribute('innerText').strip().replace('\r\n','').replace('\n','').lower()]
             print(properties_name)
+            all_property_names.extend(properties_name)
             property_types = driver.find_elements(By.CSS_SELECTOR,'h2.PseudoTupleRevamp__subHeading, .ellipsis, .PseudoTupleRevamp__projectHeading')
             for element in property_types:
                 if property_types:
