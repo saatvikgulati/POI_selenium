@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import pandas as pd
 import config
+import os
 
 driver=webdriver.ChromiumEdge()
 all_property_names = []
@@ -32,6 +33,8 @@ try:
             driver.back()
             WebDriverWait(driver, 15).until(EC.presence_of_all_elements_located((By.XPATH, '//a[contains(@data-custominfo, "For Buyers")]')))
         all_dict={'Name':all_property_names,'Links':all_property_links,'Types':all_property_types}
+        if not os.path.exists('data'):
+            os.mkdir('data')
         pd.DataFrame(dict([(i,pd.Series(j)) for i,j in all_dict.items()])).to_csv('data/property_list.csv',index=False)
         print(all_property_types)
 finally:
