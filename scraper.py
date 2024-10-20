@@ -10,7 +10,7 @@ from config import *
 import time
 
 def get_home_links(url):
-    driver = webdriver.Chrome()
+    driver = webdriver.ChromiumEdge()
     try:
         driver.get(url)
 
@@ -39,7 +39,7 @@ def get_home_links(url):
 def get_area_details(link):
     all_property_names = []
     all_property_types = []
-    driver = webdriver.Chrome()
+    driver = webdriver.ChromiumEdge()
     driver.get(link)
     property_names_cnt=2
     while True:
